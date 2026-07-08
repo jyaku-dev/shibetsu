@@ -13,13 +13,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install MuseScore 4 and dependencies
+      - name: Install dependencies and fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y software-properties-common xvfb fontconfig fonts-noto-cjk
-          sudo add-apt-repository -y ppa:mscore-ubuntu/mscore4-stable
-          sudo apt-get update
-          sudo apt-get install -y musescore4
+          sudo apt-get install -y \
+            xvfb wget fontconfig libnss3 libasound2 libxkbcommon-x11-0 \
+            libegl1 libopengl0 libjack0 fonts-noto-cjk
 
           mkdir -p ~/.local/share/fonts/klee-one
           wget -O ~/.local/share/fonts/klee-one/KleeOne-Regular.ttf \
@@ -27,30 +26,30 @@ jobs:
           wget -O ~/.local/share/fonts/klee-one/KleeOne-SemiBold.ttf \
             "https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-SemiBold.ttf"
           fc-cache -fv
+          fc-match "Klee One"
 
-          which mscore4 || true
-          which musescore4 || true
+      - name: Download MuseScore Studio 4.4.4
+        run: |
+          wget -O MuseScore.AppImage \
+            "https://github.com/musescore/MuseScore/releases/download/v4.4.4/MuseScore-Studio-4.4.4.243461245-x86_64.AppImage"
+
+          chmod +x MuseScore.AppImage
+          ./MuseScore.AppImage --appimage-extract
 
       - name: Export all root .mscx files
         run: |
-          mkdir -p exports
+          mkdir -p exports jobs muhome
           : > export-failures.txt
 
+          export HOME="$PWD/muhome"
           export QT_ACCESSIBILITY=0
           export XDG_RUNTIME_DIR="$RUNNER_TEMP/runtime"
           mkdir -p "$XDG_RUNTIME_DIR"
           chmod 700 "$XDG_RUNTIME_DIR"
 
-          if command -v mscore4 >/dev/null 2>&1; then
-            MSCORE=mscore4
-          elif command -v musescore4 >/dev/null 2>&1; then
-            MSCORE=musescore4
-          else
-            echo "MuseScore 4 executable not found."
-            exit 1
-          fi
+          MSCORE="./squashfs-root/bin/mscore4portable"
 
-          echo "Using: $MSCORE"
+          echo "MuseScore version:"
           xvfb-run -a "$MSCORE" --version || true
 
           shopt -s nullglob
@@ -63,15 +62,43 @@ jobs:
 
           for file in "${files[@]}"; do
             base="$(basename "$file" .mscx)"
-            echo "Exporting: $file"
+            job="jobs/${base}.json"
 
-            if ! xvfb-run -a "$MSCORE" -F -f -o "exports/${base}.pdf" "$file"; then
-              echo "$file -> PDF failed" | tee -a export-failures.txt
+            echo "Creating job for: $file"
+
+            cat > "$job" <<EOF
+          [
+            {
+              "in": "$file",
+              "out": [
+                "exports/${base}.pdf",
+                "exports/${base}.mp3"
+              ]
+            }
+          ]
+          EOF
+
+            echo "Job file:"
+            cat "$job"
+
+            set +e
+            xvfb-run -a "$MSCORE" -F -f -j "$job"
+            code=$?
+            set -e
+
+            echo "Job exit code: $code"
+            ls -lah exports || true
+
+            if [ "$code" -ne 0 ]; then
+              echo "$file -> job failed, exit code $code" | tee -a export-failures.txt
             fi
 
-            if ! xvfb-run -a "$MSCORE" -F -f --sound-profile "MuseScore Basic" \
-              -o "exports/${base}.mp3" "$file"; then
-              echo "$file -> MP3 failed" | tee -a export-failures.txt
+            if [ ! -s "exports/${base}.pdf" ]; then
+              echo "$file -> PDF missing" | tee -a export-failures.txt
+            fi
+
+            if [ ! -s "exports/${base}.mp3" ]; then
+              echo "$file -> MP3 missing" | tee -a export-failures.txt
             fi
           done
 
@@ -91,4 +118,5 @@ jobs:
           name: musescore-exports
           path: |
             exports/
+            jobs/
             export-failures.txt
