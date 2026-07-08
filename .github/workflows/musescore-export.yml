@@ -63,6 +63,20 @@ jobs:
             exit 1
           fi
 
+      - name: Inspect extracted AppImage
+        run: |
+          echo "===== Current directory ====="
+          pwd
+
+          echo "===== Repository ====="
+          ls -lah
+
+          echo "===== squashfs-root ====="
+          find squashfs-root -maxdepth 3 | sort
+
+          echo "===== Executables ====="
+          find squashfs-root -type f -executable | sort
+
       - name: Upload Exported Files
         if: always()
         uses: actions/upload-artifact@v4
