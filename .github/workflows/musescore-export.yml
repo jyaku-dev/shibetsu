@@ -35,15 +35,17 @@ jobs:
             libnss3 libasound2 libxkbcommon-x11-0 \
             libegl1 libopengl0 libjack0 fonts-noto-cjk
 
-          mkdir -p ~/.local/share/fonts/klee-one
+          sudo mkdir -p /usr/local/share/fonts/klee-one
 
-          wget -q -O ~/.local/share/fonts/klee-one/KleeOne-Regular.ttf \
+          sudo wget -q -O /usr/local/share/fonts/klee-one/KleeOne-Regular.ttf \
             https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-Regular.ttf
 
-          wget -q -O ~/.local/share/fonts/klee-one/KleeOne-SemiBold.ttf \
+          sudo wget -q -O /usr/local/share/fonts/klee-one/KleeOne-SemiBold.ttf \
             https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-SemiBold.ttf
 
-          fc-cache -f
+          sudo fc-cache -fv
+          fc-list | grep -i "Klee" || true
+          fc-match "Klee One"
 
       - name: Download MuseScore Studio
         if: steps.cache-musescore.outputs.cache-hit != 'true'
