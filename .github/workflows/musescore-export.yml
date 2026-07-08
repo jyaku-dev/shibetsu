@@ -17,7 +17,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            xvfb wget fontconfig libnss3 libasound2 libxkbcommon-x11-0 \
+            xvfb dbus wget fontconfig \
+            libnss3 libasound2 libxkbcommon-x11-0 \
             libegl1 libopengl0 libjack0 fonts-noto-cjk
 
           mkdir -p ~/.local/share/fonts/klee-one
@@ -25,6 +26,7 @@ jobs:
             "https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-Regular.ttf"
           wget -O ~/.local/share/fonts/klee-one/KleeOne-SemiBold.ttf \
             "https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-SemiBold.ttf"
+
           fc-cache -fv
           fc-match "Klee One"
 
@@ -38,7 +40,7 @@ jobs:
 
       - name: Export all root .mscx files
         run: |
-          mkdir -p exports jobs muhome
+          mkdir -p exports muhome
           : > export-failures.txt
 
           export HOME="$PWD/muhome"
@@ -47,10 +49,10 @@ jobs:
           mkdir -p "$XDG_RUNTIME_DIR"
           chmod 700 "$XDG_RUNTIME_DIR"
 
-          MSCORE="./squashfs-root/bin/mscore4portable"
+          MSCORE="./squashfs-root/AppRun"
 
           echo "MuseScore version:"
-          xvfb-run -a "$MSCORE" --version || true
+          dbus-run-session xvfb-run -a -- "$MSCORE" --version || true
 
           shopt -s nullglob
           files=(./*.mscx)
@@ -62,49 +64,21 @@ jobs:
 
           for file in "${files[@]}"; do
             base="$(basename "$file" .mscx)"
-            job="jobs/${base}.json"
+            echo "Exporting: $file"
 
-            echo "Creating job for: $file"
-
-            cat > "$job" <<EOF
-          [
-            {
-              "in": "$file",
-              "out": [
-                {
-                  "file": "exports/${base}.pdf",
-                  "format": "pdf"
-                },
-                {
-                  "file": "exports/${base}.mp3",
-                  "format": "mp3"
-                }
-              ]
-            }
-          ]
-          EOF
-
-            echo "Job file:"
-            cat "$job"
-
-            set +e
-            xvfb-run -a "$MSCORE" -F -f -j "$job"
-            code=$?
-            set -e
-
-            echo "Job exit code: $code"
-            ls -lah exports || true
-
-            if [ "$code" -ne 0 ]; then
-              echo "$file -> job failed, exit code $code" | tee -a export-failures.txt
+            echo "PDF..."
+            if ! dbus-run-session xvfb-run -a -- "$MSCORE" \
+              -F -f \
+              -o "exports/${base}.pdf" "$file"; then
+              echo "$file -> PDF failed" | tee -a export-failures.txt
             fi
 
-            if [ ! -s "exports/${base}.pdf" ]; then
-              echo "$file -> PDF missing" | tee -a export-failures.txt
-            fi
-
-            if [ ! -s "exports/${base}.mp3" ]; then
-              echo "$file -> MP3 missing" | tee -a export-failures.txt
+            echo "MP3..."
+            if ! dbus-run-session xvfb-run -a -- "$MSCORE" \
+              -F -f \
+              --sound-profile "MuseScore Basic" \
+              -o "exports/${base}.mp3" "$file"; then
+              echo "$file -> MP3 failed" | tee -a export-failures.txt
             fi
           done
 
@@ -124,5 +98,4 @@ jobs:
           name: musescore-exports
           path: |
             exports/
-            jobs/
             export-failures.txt
