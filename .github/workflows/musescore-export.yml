@@ -13,12 +13,21 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Install dependencies and fonts
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            xvfb wget libnss3 libasound2 libxkbcommon-x11-0 \
-            libegl1 libopengl0 libjack0
+            xvfb wget fontconfig libnss3 libasound2 libxkbcommon-x11-0 \
+            libegl1 libopengl0 libjack0 fonts-noto-cjk
+
+          mkdir -p ~/.local/share/fonts/klee-one
+          wget -O ~/.local/share/fonts/klee-one/KleeOne-Regular.ttf \
+            "https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-Regular.ttf"
+          wget -O ~/.local/share/fonts/klee-one/KleeOne-SemiBold.ttf \
+            "https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-SemiBold.ttf"
+
+          fc-cache -fv
+          fc-match "Klee One"
 
       - name: Download MuseScore Studio 4.4.4
         run: |
