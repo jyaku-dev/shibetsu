@@ -1,0 +1,51 @@
+name: MuseScore 4 CLI Export
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-export:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb libfuse2 wget
+
+      - name: Download MuseScore 4
+        run: |
+          wget -O MuseScore.AppImage \
+            https://github.com/musescore/MuseScore/releases/download/v4.4.4/MuseScore-Studio-4.4.4.242971445-x86_64.AppImage
+          chmod +x MuseScore.AppImage
+
+      - name: Export all root .mscz files to PDF and MP3
+        run: |
+          mkdir -p exports
+
+          shopt -s nullglob
+          files=(./*.mscz)
+
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No .mscz files found in repository root."
+            exit 1
+          fi
+
+          for file in "${files[@]}"; do
+            base="$(basename "$file" .mscz)"
+            echo "Exporting $file"
+
+            xvfb-run -a ./MuseScore.AppImage -o "exports/${base}.pdf" "$file"
+            xvfb-run -a ./MuseScore.AppImage -o "exports/${base}.mp3" "$file"
+          done
+
+      - name: Upload Exported Files
+        uses: actions/upload-artifact@v4
+        with:
+          name: musescore-exports
+          path: exports/
