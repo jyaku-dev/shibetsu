@@ -33,7 +33,6 @@ jobs:
           mkdir -p exports
           : > export-failures.txt
 
-          export QT_QPA_PLATFORM=offscreen
           export QT_ACCESSIBILITY=0
           export XDG_RUNTIME_DIR="$RUNNER_TEMP/runtime"
           mkdir -p "$XDG_RUNTIME_DIR"
@@ -51,11 +50,15 @@ jobs:
             base="$(basename "$file" .mscx)"
             echo "Exporting: $file"
 
-            if ! ./squashfs-root/bin/mscore4portable -o "exports/${base}.pdf" "$file"; then
+            echo "PDF..."
+            if ! xvfb-run -a ./squashfs-root/bin/mscore4portable \
+              -o "exports/${base}.pdf" "$file"; then
               echo "$file -> PDF failed" | tee -a export-failures.txt
             fi
 
-            if ! ./squashfs-root/bin/mscore4portable -o "exports/${base}.mp3" "$file"; then
+            echo "MP3..."
+            if ! xvfb-run -a ./squashfs-root/bin/mscore4portable \
+              -o "exports/${base}.mp3" "$file"; then
               echo "$file -> MP3 failed" | tee -a export-failures.txt
             fi
           done
