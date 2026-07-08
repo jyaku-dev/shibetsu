@@ -64,6 +64,7 @@ jobs:
           fi
 
       - name: Inspect extracted AppImage
+        if: always()
         run: |
           echo "===== Current directory ====="
           pwd
