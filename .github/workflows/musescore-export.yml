@@ -16,7 +16,9 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y xvfb wget libnss3 libasound2 libxkbcommon-x11-0 libegl1 libopengl0
+          sudo apt-get install -y \
+            xvfb wget libnss3 libasound2 libxkbcommon-x11-0 \
+            libegl1 libopengl0 libjack0
 
       - name: Download MuseScore Studio 4.4.4
         run: |
@@ -26,9 +28,10 @@ jobs:
           chmod +x MuseScore.AppImage
           ./MuseScore.AppImage --appimage-extract
 
-      - name: Export all root .mscx files to PDF and MP3
+      - name: Export all root .mscx files
         run: |
           mkdir -p exports
+          : > export-failures.txt
 
           shopt -s nullglob
           files=(./*.mscx)
@@ -42,12 +45,29 @@ jobs:
             base="$(basename "$file" .mscx)"
             echo "Exporting: $file"
 
-            xvfb-run -a ./squashfs-root/AppRun -o "exports/${base}.pdf" "$file"
-            xvfb-run -a ./squashfs-root/AppRun -o "exports/${base}.mp3" "$file"
+            if ! xvfb-run -a ./squashfs-root/AppRun -o "exports/${base}.pdf" "$file"; then
+              echo "$file -> PDF failed" | tee -a export-failures.txt
+            fi
+
+            if ! xvfb-run -a ./squashfs-root/AppRun -o "exports/${base}.mp3" "$file"; then
+              echo "$file -> MP3 failed" | tee -a export-failures.txt
+            fi
           done
 
+          echo "Generated files:"
+          find exports -type f -maxdepth 1 -print
+
+          if [ -s export-failures.txt ]; then
+            echo "Some exports failed:"
+            cat export-failures.txt
+            exit 1
+          fi
+
       - name: Upload Exported Files
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: musescore-exports
-          path: exports/
+          path: |
+            exports/
+            export-failures.txt
