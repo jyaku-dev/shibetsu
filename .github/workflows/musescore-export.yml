@@ -33,6 +33,12 @@ jobs:
           mkdir -p exports
           : > export-failures.txt
 
+          export QT_QPA_PLATFORM=offscreen
+          export QT_ACCESSIBILITY=0
+          export XDG_RUNTIME_DIR="$RUNNER_TEMP/runtime"
+          mkdir -p "$XDG_RUNTIME_DIR"
+          chmod 700 "$XDG_RUNTIME_DIR"
+
           shopt -s nullglob
           files=(./*.mscx)
 
@@ -45,38 +51,23 @@ jobs:
             base="$(basename "$file" .mscx)"
             echo "Exporting: $file"
 
-            if ! xvfb-run -a ./squashfs-root/AppRun -o "exports/${base}.pdf" "$file"; then
+            if ! ./squashfs-root/bin/mscore4portable -o "exports/${base}.pdf" "$file"; then
               echo "$file -> PDF failed" | tee -a export-failures.txt
             fi
 
-            if ! xvfb-run -a ./squashfs-root/AppRun -o "exports/${base}.mp3" "$file"; then
+            if ! ./squashfs-root/bin/mscore4portable -o "exports/${base}.mp3" "$file"; then
               echo "$file -> MP3 failed" | tee -a export-failures.txt
             fi
           done
 
           echo "Generated files:"
-          find exports -type f -maxdepth 1 -print
+          find exports -maxdepth 1 -type f -print
 
           if [ -s export-failures.txt ]; then
             echo "Some exports failed:"
             cat export-failures.txt
             exit 1
           fi
-
-      - name: Inspect extracted AppImage
-        if: always()
-        run: |
-          echo "===== Current directory ====="
-          pwd
-
-          echo "===== Repository ====="
-          ls -lah
-
-          echo "===== squashfs-root ====="
-          find squashfs-root -maxdepth 3 | sort
-
-          echo "===== Executables ====="
-          find squashfs-root -type f -executable | sort
 
       - name: Upload Exported Files
         if: always()
