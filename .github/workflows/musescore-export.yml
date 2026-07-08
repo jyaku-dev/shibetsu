@@ -1,4 +1,4 @@
-name: MuseScore 4 CLI Export
+name: MuseScore 4.6.5 Export
 
 on:
   push:
@@ -6,92 +6,107 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-export:
+  export:
     runs-on: ubuntu-22.04
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Install dependencies and fonts
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            xvfb dbus wget fontconfig \
-            libnss3 libasound2 libxkbcommon-x11-0 \
-            libegl1 libopengl0 libjack0 fonts-noto-cjk
+            xvfb \
+            dbus \
+            wget \
+            fontconfig \
+            libnss3 \
+            libasound2 \
+            libxkbcommon-x11-0 \
+            libegl1 \
+            libopengl0 \
+            libjack0 \
+            fonts-noto-cjk
 
           mkdir -p ~/.local/share/fonts/klee-one
+
           wget -O ~/.local/share/fonts/klee-one/KleeOne-Regular.ttf \
-            "https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-Regular.ttf"
+            https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-Regular.ttf
+
           wget -O ~/.local/share/fonts/klee-one/KleeOne-SemiBold.ttf \
-            "https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-SemiBold.ttf"
+            https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-SemiBold.ttf
 
           fc-cache -fv
-          fc-match "Klee One"
 
-      - name: Download MuseScore Studio 4.4.4
+      - name: Download MuseScore Studio 4.6.5
         run: |
           wget -O MuseScore.AppImage \
-            "https://github.com/musescore/MuseScore/releases/download/v4.4.4/MuseScore-Studio-4.4.4.243461245-x86_64.AppImage"
+            https://github.com/musescore/MuseScore/releases/download/v4.6.5/MuseScore-Studio-4.6.5.253511702-x86_64.AppImage
 
           chmod +x MuseScore.AppImage
           ./MuseScore.AppImage --appimage-extract
 
-      - name: Export all root .mscx files
+      - name: Show version
         run: |
-          mkdir -p exports muhome
+          dbus-run-session xvfb-run -a -- \
+            ./squashfs-root/AppRun --version
+
+      - name: Export all root MSCX files
+        run: |
+          mkdir -p exports
           : > export-failures.txt
 
           export HOME="$PWD/muhome"
+          mkdir -p "$HOME"
+
           export QT_ACCESSIBILITY=0
+
           export XDG_RUNTIME_DIR="$RUNNER_TEMP/runtime"
           mkdir -p "$XDG_RUNTIME_DIR"
           chmod 700 "$XDG_RUNTIME_DIR"
-
-          MSCORE="./squashfs-root/AppRun"
-
-          echo "MuseScore version:"
-          dbus-run-session xvfb-run -a -- "$MSCORE" --version || true
 
           shopt -s nullglob
           files=(./*.mscx)
 
           if [ ${#files[@]} -eq 0 ]; then
-            echo "No .mscx files found in repository root."
+            echo "No .mscx files found."
             exit 1
           fi
 
           for file in "${files[@]}"; do
             base="$(basename "$file" .mscx)"
-            echo "Exporting: $file"
 
-            echo "PDF..."
-            if ! dbus-run-session xvfb-run -a -- "$MSCORE" \
+            echo "Exporting $file"
+
+            if ! dbus-run-session xvfb-run -a -- \
+              ./squashfs-root/AppRun \
               -F -f \
-              -o "exports/${base}.pdf" "$file"; then
+              -o "exports/${base}.pdf" \
+              "$file"; then
               echo "$file -> PDF failed" | tee -a export-failures.txt
             fi
 
-            echo "MP3..."
-            if ! dbus-run-session xvfb-run -a -- "$MSCORE" \
+            if ! dbus-run-session xvfb-run -a -- \
+              ./squashfs-root/AppRun \
               -F -f \
               --sound-profile "MuseScore Basic" \
-              -o "exports/${base}.mp3" "$file"; then
+              -o "exports/${base}.mp3" \
+              "$file"; then
               echo "$file -> MP3 failed" | tee -a export-failures.txt
             fi
           done
 
           echo "Generated files:"
-          find exports -maxdepth 1 -type f -print || true
+          find exports -type f
 
           if [ -s export-failures.txt ]; then
-            echo "Some exports failed:"
+            echo
+            echo "Failures:"
             cat export-failures.txt
             exit 1
           fi
 
-      - name: Upload Exported Files
+      - name: Upload artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
