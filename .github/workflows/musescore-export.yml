@@ -71,8 +71,14 @@ jobs:
             {
               "in": "$file",
               "out": [
-                "exports/${base}.pdf",
-                "exports/${base}.mp3"
+                {
+                  "file": "exports/${base}.pdf",
+                  "format": "pdf"
+                },
+                {
+                  "file": "exports/${base}.mp3",
+                  "format": "mp3"
+                }
               ]
             }
           ]
