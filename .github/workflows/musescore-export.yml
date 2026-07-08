@@ -1,72 +1,76 @@
-name: MuseScore 4.6.5 Export
+name: MuseScore Export
 
 on:
   push:
     branches: [ main ]
+    paths:
+      - "**.mscx"
+      - ".github/workflows/musescore-export.yml"
   workflow_dispatch:
+
+env:
+  MUSESCORE_VERSION: "4.6.5"
+  MUSESCORE_BUILD: "253511702"
 
 jobs:
   export:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Cache MuseScore AppImage extraction
+        id: cache-musescore
+        uses: actions/cache@v4
+        with:
+          path: squashfs-root
+          key: musescore-${{ env.MUSESCORE_VERSION }}-${{ env.MUSESCORE_BUILD }}-appimage
+
+      - name: Install dependencies and fonts
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            xvfb \
-            dbus \
-            wget \
-            fontconfig \
-            libnss3 \
-            libasound2 \
-            libxkbcommon-x11-0 \
-            libegl1 \
-            libopengl0 \
-            libjack0 \
-            fonts-noto-cjk
+            xvfb dbus wget fontconfig \
+            libnss3 libasound2 libxkbcommon-x11-0 \
+            libegl1 libopengl0 libjack0 fonts-noto-cjk
 
           mkdir -p ~/.local/share/fonts/klee-one
 
-          wget -O ~/.local/share/fonts/klee-one/KleeOne-Regular.ttf \
+          wget -q -O ~/.local/share/fonts/klee-one/KleeOne-Regular.ttf \
             https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-Regular.ttf
 
-          wget -O ~/.local/share/fonts/klee-one/KleeOne-SemiBold.ttf \
+          wget -q -O ~/.local/share/fonts/klee-one/KleeOne-SemiBold.ttf \
             https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-SemiBold.ttf
 
-          fc-cache -fv
+          fc-cache -f
 
-      - name: Download MuseScore Studio 4.6.5
+      - name: Download MuseScore Studio
+        if: steps.cache-musescore.outputs.cache-hit != 'true'
         run: |
-          wget -O MuseScore.AppImage \
-            https://github.com/musescore/MuseScore/releases/download/v4.6.5/MuseScore-Studio-4.6.5.253511702-x86_64.AppImage
+          wget -q -O MuseScore.AppImage \
+            "https://github.com/musescore/MuseScore/releases/download/v${MUSESCORE_VERSION}/MuseScore-Studio-${MUSESCORE_VERSION}.${MUSESCORE_BUILD}-x86_64.AppImage"
 
           chmod +x MuseScore.AppImage
           ./MuseScore.AppImage --appimage-extract
 
-      - name: Show version
+      - name: Show MuseScore version
         run: |
-          dbus-run-session xvfb-run -a -- \
-            ./squashfs-root/AppRun --version
+          dbus-run-session xvfb-run -a -- ./squashfs-root/AppRun --version
 
-      - name: Export all root MSCX files
+      - name: Export all MSCX files
         run: |
-          mkdir -p exports
+          mkdir -p exports logs muhome
           : > export-failures.txt
 
           export HOME="$PWD/muhome"
-          mkdir -p "$HOME"
-
           export QT_ACCESSIBILITY=0
-
           export XDG_RUNTIME_DIR="$RUNNER_TEMP/runtime"
           mkdir -p "$XDG_RUNTIME_DIR"
           chmod 700 "$XDG_RUNTIME_DIR"
 
-          shopt -s nullglob
-          files=(./*.mscx)
+          shopt -s globstar nullglob
+          files=(**/*.mscx)
 
           if [ ${#files[@]} -eq 0 ]; then
             echo "No .mscx files found."
@@ -74,30 +78,47 @@ jobs:
           fi
 
           for file in "${files[@]}"; do
-            base="$(basename "$file" .mscx)"
+            case "$file" in
+              squashfs-root/*|exports/*|muhome/*|logs/*)
+                continue
+                ;;
+            esac
 
-            echo "Exporting $file"
+            base="${file%.mscx}"
+            safe="${base//\//__}"
 
-            if ! dbus-run-session xvfb-run -a -- \
-              ./squashfs-root/AppRun \
+            pdf="exports/${safe}.pdf"
+            mp3="exports/${safe}.mp3"
+
+            echo "Exporting: $file"
+
+            echo "PDF..."
+            if ! dbus-run-session xvfb-run -a -- ./squashfs-root/AppRun \
               -F -f \
-              -o "exports/${base}.pdf" \
-              "$file"; then
+              -o "$pdf" \
+              "$file" \
+              > "logs/${safe}.pdf.log" 2>&1; then
               echo "$file -> PDF failed" | tee -a export-failures.txt
+              cat "logs/${safe}.pdf.log"
             fi
 
-            if ! dbus-run-session xvfb-run -a -- \
-              ./squashfs-root/AppRun \
+            echo "MP3..."
+            if ! dbus-run-session xvfb-run -a -- ./squashfs-root/AppRun \
               -F -f \
               --sound-profile "MuseScore Basic" \
-              -o "exports/${base}.mp3" \
-              "$file"; then
+              -o "$mp3" \
+              "$file" \
+              > "logs/${safe}.mp3.log" 2>&1; then
               echo "$file -> MP3 failed" | tee -a export-failures.txt
+              cat "logs/${safe}.mp3.log"
             fi
+
+            [ -s "$pdf" ] || echo "$file -> PDF missing or empty" | tee -a export-failures.txt
+            [ -s "$mp3" ] || echo "$file -> MP3 missing or empty" | tee -a export-failures.txt
           done
 
           echo "Generated files:"
-          find exports -type f
+          find exports -type f -print || true
 
           if [ -s export-failures.txt ]; then
             echo
@@ -106,11 +127,12 @@ jobs:
             exit 1
           fi
 
-      - name: Upload artifacts
+      - name: Upload exported files
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: musescore-exports
           path: |
             exports/
+            logs/
             export-failures.txt
