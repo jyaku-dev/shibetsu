@@ -26,20 +26,20 @@ jobs:
           chmod +x MuseScore.AppImage
           ./MuseScore.AppImage --appimage-extract
 
-      - name: Export all root .mscz files to PDF and MP3
+      - name: Export all root .mscx files to PDF and MP3
         run: |
           mkdir -p exports
 
           shopt -s nullglob
-          files=(./*.mscz)
+          files=(./*.mscx)
 
           if [ ${#files[@]} -eq 0 ]; then
-            echo "No .mscz files found in repository root."
+            echo "No .mscx files found in repository root."
             exit 1
           fi
 
           for file in "${files[@]}"; do
-            base="$(basename "$file" .mscz)"
+            base="$(basename "$file" .mscx)"
             echo "Exporting: $file"
 
             xvfb-run -a ./squashfs-root/AppRun -o "exports/${base}.pdf" "$file"
