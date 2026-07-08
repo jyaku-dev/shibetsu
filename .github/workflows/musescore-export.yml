@@ -16,13 +16,15 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y xvfb libfuse2 wget
+          sudo apt-get install -y xvfb wget libnss3 libasound2 libxkbcommon-x11-0 libegl1 libopengl0
 
-      - name: Download MuseScore 4
+      - name: Download MuseScore Studio 4.4.4
         run: |
           wget -O MuseScore.AppImage \
-            https://github.com/musescore/MuseScore/releases/download/v4.4.4/MuseScore-Studio-4.4.4.242971445-x86_64.AppImage
+            "https://github.com/musescore/MuseScore/releases/download/v4.4.4/MuseScore-Studio-4.4.4.243461245-x86_64.AppImage"
+
           chmod +x MuseScore.AppImage
+          ./MuseScore.AppImage --appimage-extract
 
       - name: Export all root .mscz files to PDF and MP3
         run: |
@@ -38,10 +40,10 @@ jobs:
 
           for file in "${files[@]}"; do
             base="$(basename "$file" .mscz)"
-            echo "Exporting $file"
+            echo "Exporting: $file"
 
-            xvfb-run -a ./MuseScore.AppImage -o "exports/${base}.pdf" "$file"
-            xvfb-run -a ./MuseScore.AppImage -o "exports/${base}.mp3" "$file"
+            xvfb-run -a ./squashfs-root/AppRun -o "exports/${base}.pdf" "$file"
+            xvfb-run -a ./squashfs-root/AppRun -o "exports/${base}.mp3" "$file"
           done
 
       - name: Upload Exported Files
