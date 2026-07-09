@@ -3,6 +3,8 @@ name: MuseScore Export
 on:
   push:
     branches: [ main ]
+    tags:
+      - "v*"
     paths:
       - "**.mscx"
       - ".github/workflows/musescore-export.yml"
@@ -138,3 +140,11 @@ jobs:
             exports/
             logs/
             export-failures.txt
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            exports/*.pdf
+            exports/*.mp3
