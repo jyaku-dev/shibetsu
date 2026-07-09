@@ -47,11 +47,13 @@ jobs:
 
           sudo mkdir -p /usr/local/share/fonts/klee-one
 
-          sudo wget -q -O /usr/local/share/fonts/klee-one/KleeOne-Regular.ttf \
-            https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-Regular.ttf
+          sudo wget --tries=5 --waitretry=5 --retry-connrefused --timeout=30 \
+            -O /usr/local/share/fonts/klee-one/KleeOne-Regular.ttf \
+            https://raw.githubusercontent.com/google/fonts/main/ofl/kleeone/KleeOne-Regular.ttf
 
-          sudo wget -q -O /usr/local/share/fonts/klee-one/KleeOne-SemiBold.ttf \
-            https://github.com/google/fonts/raw/main/ofl/kleeone/KleeOne-SemiBold.ttf
+          sudo wget --tries=5 --waitretry=5 --retry-connrefused --timeout=30 \
+            -O /usr/local/share/fonts/klee-one/KleeOne-SemiBold.ttf \
+            https://raw.githubusercontent.com/google/fonts/main/ofl/kleeone/KleeOne-SemiBold.ttf
 
           sudo fc-cache -fv
           fc-list | grep -i "Klee" || true
@@ -60,7 +62,8 @@ jobs:
       - name: Download MuseScore Studio
         if: steps.cache-musescore.outputs.cache-hit != 'true'
         run: |
-          wget -q -O MuseScore.AppImage \
+          wget --tries=5 --waitretry=5 --retry-connrefused --timeout=60 \
+            -O MuseScore.AppImage \
             "https://github.com/musescore/MuseScore/releases/download/v${MUSESCORE_VERSION}/MuseScore-Studio-${MUSESCORE_VERSION}.${MUSESCORE_BUILD}-x86_64.AppImage"
 
           chmod +x MuseScore.AppImage
