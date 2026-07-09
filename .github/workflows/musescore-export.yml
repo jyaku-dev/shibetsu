@@ -15,6 +15,9 @@ on:
         required: false
         type: string
 
+permissions:
+  contents: write
+
 env:
   MUSESCORE_VERSION: "4.6.5"
   MUSESCORE_BUILD: "253511702"
