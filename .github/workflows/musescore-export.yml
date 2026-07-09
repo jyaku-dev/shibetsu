@@ -9,6 +9,11 @@ on:
       - "**.mscx"
       - ".github/workflows/musescore-export.yml"
   workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Existing tag to publish, e.g. v1.0.0"
+        required: false
+        type: string
 
 env:
   MUSESCORE_VERSION: "4.6.5"
@@ -142,9 +147,10 @@ jobs:
             export-failures.txt
 
       - name: Create GitHub Release
-        if: startsWith(github.ref, 'refs/tags/v')
+        if: startsWith(github.ref, 'refs/tags/v') || inputs.release_tag != ''
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ inputs.release_tag || github.ref_name }}
           files: |
             exports/*.pdf
             exports/*.mp3
