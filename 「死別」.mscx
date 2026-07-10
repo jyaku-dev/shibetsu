@@ -41,59 +41,19 @@
           </StaffType>
         <defaultClef>F</defaultClef>
         </Staff>
-      <trackName>Piano, Piano 1</trackName>
-      <Instrument id="piano">
-        <longName>Piano, Piano 1</longName>
-        <shortName>Pno.</shortName>
-        <trackName>Piano</trackName>
-        <minPitchP>21</minPitchP>
-        <maxPitchP>108</maxPitchP>
-        <minPitchA>21</minPitchA>
-        <maxPitchA>108</maxPitchA>
-        <instrumentId>keyboard.piano</instrumentId>
+      <trackName>Accordion</trackName>
+      <Instrument id="accordion">
+        <longName>Accordion</longName>
+        <shortName>Acc.</shortName>
+        <trackName>Accordion</trackName>
+        <minPitchP>28</minPitchP>
+        <maxPitchP>97</maxPitchP>
+        <minPitchA>36</minPitchA>
+        <maxPitchA>93</maxPitchA>
+        <instrumentId>keyboard.accordion</instrumentId>
         <clef staff="2">F</clef>
-        <Articulation>
-          <velocity>100</velocity>
-          <gateTime>95</gateTime>
-          </Articulation>
-        <Articulation name="staccatissimo">
-          <velocity>100</velocity>
-          <gateTime>33</gateTime>
-          </Articulation>
-        <Articulation name="staccato">
-          <velocity>100</velocity>
-          <gateTime>50</gateTime>
-          </Articulation>
-        <Articulation name="portato">
-          <velocity>100</velocity>
-          <gateTime>67</gateTime>
-          </Articulation>
-        <Articulation name="tenuto">
-          <velocity>100</velocity>
-          <gateTime>100</gateTime>
-          </Articulation>
-        <Articulation name="marcato">
-          <velocity>120</velocity>
-          <gateTime>67</gateTime>
-          </Articulation>
-        <Articulation name="sforzato">
-          <velocity>150</velocity>
-          <gateTime>100</gateTime>
-          </Articulation>
-        <Articulation name="sforzatoStaccato">
-          <velocity>150</velocity>
-          <gateTime>50</gateTime>
-          </Articulation>
-        <Articulation name="marcatoStaccato">
-          <velocity>120</velocity>
-          <gateTime>50</gateTime>
-          </Articulation>
-        <Articulation name="marcatoTenuto">
-          <velocity>120</velocity>
-          <gateTime>100</gateTime>
-          </Articulation>
         <Channel>
-          <program value="0"/>
+          <program value="21"/>
           <synti>Fluid</synti>
           </Channel>
         <Channel name="harmony">
@@ -6950,7 +6910,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>TF7/0qZFp8C_AfPhsZGugyO</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -6968,7 +6928,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>clnnx8DKFeD_yd4/k2HiQNI</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -6978,7 +6938,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>yOkaMNCSWVN_keepOSasI3C</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -6996,7 +6956,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>QKwiOUMzg7N_5azRq8aXB7M</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7070,7 +7030,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>VUckjlDPgxJ_RAfd9jjcZfL</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7088,7 +7048,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>eSfJsPcYIwC_a2Pw3hCgw9H</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7098,7 +7058,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>RlRW9U/RYyP_0g2+9iBdQSJ</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7116,7 +7076,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Rj57zLwu5yL_Td/Q/TgBnBF</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7188,7 +7148,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>FnCHVkR5I0P_oESZvb0NgoN</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7206,7 +7166,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>PgDd0kiXpVD_Z5GYQWN6cPD</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7216,7 +7176,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Eib2C2u4cpJ_7Dp1QqZ+QRC</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7234,7 +7194,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Yy5zvp0EUwB_18BqIYDxycJ</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7308,7 +7268,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>64uRVJq+x9H_y1SHh07GaWN</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7326,7 +7286,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>MGSJfQbnnzH_/ggavfqMuLF</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7336,7 +7296,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Jy2M4c70WeK_LXfnqBd5XNI</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7354,7 +7314,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>jU9Wbux55vE_QzLlZPv+KHC</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7426,7 +7386,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>HIz6qHNGtrE_KjSOHyPSTND</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7444,7 +7404,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>cLDlufetQ3E_I+8eA02OnaK</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7454,7 +7414,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>7FxyxjurvsG_9u+oYatwOTJ</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7472,7 +7432,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Kh/GpO4J1qE_fZwlS4ZWHxE</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7546,7 +7506,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>PJ1x1hMaIHN_FqUe6wfqqIO</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7564,7 +7524,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>sbdoaE6+cUF_77r+4Fa8TzM</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7574,7 +7534,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>OgbSwDTYSNK_P9+PHSsebjF</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7592,7 +7552,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>rz9H1G6iNkG_nLh6WKX+WdB</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7664,7 +7624,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Ez2Xqvzv4JK_8eBqqCKlQ6I</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7682,7 +7642,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>v5n7ZcdPRb_RoVEoBSXlSG</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7692,7 +7652,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>qQxnagjCVRB_mRYhZL3p5+F</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7710,7 +7670,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>QZwzhNOVIED_3v2Y6ClB5rH</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7784,7 +7744,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>2K3U0rg4ClO_sDLhjbs+7AB</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7802,7 +7762,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>rPrjdDD/zyH_jIxFeHDsqgH</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7812,7 +7772,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>worm4kWhIlD_FY1jI0gr60G</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -7830,7 +7790,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Okkx/8sapHO_FQk9d5ECKdM</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8041,7 +8001,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>zfOsR+ZXI8M_E2DbWZF4NmD</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8059,7 +8019,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>c9SrzcOc8aN_gNl4lSSp/aI</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8069,7 +8029,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>auVL0n1PtKJ_hcivBRlD1JG</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8087,7 +8047,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>GAi8DfFG0aN_vefMIUosUfD</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8160,7 +8120,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>u+C7tqfLf4B_sUGf7EFRY2M</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8178,7 +8138,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>uMDsfj0YYjH_//Kon5Dba0E</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8188,7 +8148,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>HMkosqzmfcF_NRPbGwAwQWD</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8206,7 +8166,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>pNNB6SXsLvI_mfDhwn6tyoJ</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8280,7 +8240,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>IKrixvS2GNO_t5Jf6d3iNyP</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8297,7 +8257,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>GNfYV3R0LeG_16Ab+yGa+pM</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8307,7 +8267,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>7xKNZSUfzJO_JJv5ke0GRbB</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8324,7 +8284,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>k87jazKFZmK_jazhJJW2x0B</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8710,7 +8670,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>exx/hLlm/hN_eMsaSrAvwTP</eid>
-              <pitch>33</pitch>
+              <pitch>45</pitch>
               <tpc>17</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8728,7 +8688,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>M9+lXWRbzjP_n8UwwEqfW3G</eid>
-              <pitch>45</pitch>
+              <pitch>57</pitch>
               <tpc>17</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8746,7 +8706,7 @@ Arranged by Jyaku</text>
                 <subtype>accidentalSharp</subtype>
                 <eid>1GfYvmnPdRO_qctibdsQSGL</eid>
                 </Accidental>
-              <pitch>37</pitch>
+              <pitch>49</pitch>
               <tpc>21</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8764,7 +8724,7 @@ Arranged by Jyaku</text>
             <eid>j4gbYSurChN_g9F8jinpXuD</eid>
             <durationType>quarter</durationType>
             <Articulation>
-              <subtype>articTenutoBelow</subtype>
+              <subtype>articTenutoAbove</subtype>
               <eid>El3efbJ9jmE_SIEZofo46fK</eid>
               </Articulation>
             <Note>
@@ -8773,7 +8733,7 @@ Arranged by Jyaku</text>
                 <subtype>accidentalSharp</subtype>
                 <eid>f7j81m4kLMK_9TSabAOLW6G</eid>
                 </Accidental>
-              <pitch>49</pitch>
+              <pitch>61</pitch>
               <tpc>21</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8787,7 +8747,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>gA3IEvjsNDP_bQI4+6Ct5yH</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8805,7 +8765,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>TgVW1EwWxxK_C8O2sVbTWiN</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -8833,7 +8793,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>gdFSYwQz+pC_u02rZpAAIoE</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9071,7 +9031,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>D5y+oXc8YoO_lWLLqKbOIqF</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9088,7 +9048,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>wwfxFoxmrvI_vCenRjp9l4L</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9098,7 +9058,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>gfHsfLjW+OI_2IVQduUpVrC</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9115,7 +9075,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>j9Uskr4TeHB_BgFzxHhj8yN</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9329,7 +9289,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>EEaxTn/7g4N_4KNAekD6y5M</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9346,7 +9306,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>OsSV/dJEiyK_zpfYO2gn4vD</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9356,7 +9316,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>WmxuxLEC4mL_6eCIfI9GVEI</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9373,7 +9333,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>f4oyGIfWYMJ_mhvQjzcG/2F</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9431,13 +9391,13 @@ Arranged by Jyaku</text>
             <durationType>whole</durationType>
             <Note>
               <eid>QYxiPg7p9JE_A9Iv4YV0hW</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
             <Note>
               <eid>cuSy3oOM+jF_+d4RoZTa//G</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9487,13 +9447,13 @@ Arranged by Jyaku</text>
             <durationType>whole</durationType>
             <Note>
               <eid>vewJfUHNMOF_y+Zi7shm6aK</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
             <Note>
               <eid>fwKoFM6zm3L_PGuGCGTBDYO</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9570,7 +9530,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>YiSsMPyzrYC_yADswgJhUCM</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9588,7 +9548,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>PqYwM6miy3B_+4yCgznIwEL</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9598,7 +9558,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>8OIb0O3y2lN_6DOEF8qxQzJ</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9616,7 +9576,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>jk6DOIXlh6M_e2gHNzEI2GB</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9690,7 +9650,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>1dkdmnFcraF_aUNcoc+PojL</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9708,7 +9668,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>oJBDWRZSzEK_/9cxPxXqZyL</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9718,7 +9678,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>VfiJCYMXfUE_TH22Mc6RwvL</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9736,7 +9696,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>a4FH2tdT0aM_dRDVd8COleD</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9808,7 +9768,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>ioXrtsxCqrJ_Poqib3Fsq2C</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9826,7 +9786,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>+XyIrWZ9E5J_ZkrL0Wo7SrD</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9836,7 +9796,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>lg3j2fyebgI_Us3gIXiE+GG</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9854,7 +9814,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>+Fw5pqPHryG_CuKgcFugz6B</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9928,7 +9888,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>M/YjTp+HNI_ELxDrFQNvlP</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9946,7 +9906,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>j3a7JE2OGlC_lGvBLmvG6sH</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9956,7 +9916,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>BFhHOp3LnX_1dKGyTfl+QJ</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -9974,7 +9934,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>4/bGIIJFjtK_Rp699eXj5XK</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10046,7 +10006,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>vMTKVamSKHK_LSv4Jjn8NcI</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10064,7 +10024,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>KfFPWkakveN_/YNR8aE4zWE</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10074,7 +10034,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>/cC19i029fP_VTJX83QgxpD</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10092,7 +10052,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>w05cHbf+wT_0HfLTFfc0IP</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10214,7 +10174,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>ZpuHFMW4hED_f5XMNrV8pyB</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10232,7 +10192,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>a02eDZEn95O_y9yUVc5TWAJ</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10242,7 +10202,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>ARoQqz0o3wG_9j35HV0dfBJ</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10260,7 +10220,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>h3K7WUyvwpO_TtfQDZ9Xq/B</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10332,7 +10292,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>PwUcrIr4QsG_zsQWYLvXZbM</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10350,7 +10310,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>wAH4DydOEzD_KAltp2G2AYE</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10360,7 +10320,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>yp4pLlap+9G_DZ8/L9pfZMD</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10378,7 +10338,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>qkqbP0rZDlM_X/+fVt36bJE</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10452,7 +10412,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Qt6Mj143oRE_Ea1NSaeC/MO</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10470,7 +10430,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>bJ5dTI2e8HD_2klbq9P/H7L</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10480,7 +10440,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>aP1W1VtUO+N_orfapFxSO2C</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10498,7 +10458,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>qv22Gtd2Gy_gGLj9b6J9FM</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10661,13 +10621,13 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>SCpCwYyUt8N_5lwvQcldOfO</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
             <Note>
               <eid>BHz4zjM8ZbE_KxOYvNjspVC</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10874,7 +10834,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>WMdLFeebHDL_OQuRKW8gbSD</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10892,7 +10852,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>0TQasiOenIL_rdw37TZZ1LL</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10902,7 +10862,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Pshu+jk6vhM_m+RYJijnxL</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10920,7 +10880,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>7HuKl4eaLTH_MnCg5jZwRTO</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -10994,7 +10954,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>1LmYQy65C4_zcKR2/DQVOC</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11011,7 +10971,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Xe/51fSZFRE_kiqIXFI7MPL</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11021,7 +10981,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>0MfHdlU4fkC_x6AiaiZzi2E</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11038,7 +10998,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>/UzUT2l6IkI_9lGlXyqosFK</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11111,7 +11071,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>j7s4EDKV+iG_jaBtEqPT0eD</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11129,7 +11089,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>O8NVivGnNGP_CzoxvBstSvC</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11139,7 +11099,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>qqXceCOl9TJ_TQCVwDM0rCN</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11157,7 +11117,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>6+usXEeAcOP_d89A7iXcVdC</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11231,7 +11191,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>FdtRF1n4qnD_rILDO+kMt9H</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11248,7 +11208,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>/KaSM5UK6VF_0bfj2dPrL/D</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11258,7 +11218,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>lL9oRlyZ1FF_5dg/7UQvNND</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11275,7 +11235,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>lhPioO9ibTE_b62/Qkk7njK</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11661,7 +11621,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>l5PGuEjXZeK_FtKscsJj5LF</eid>
-              <pitch>33</pitch>
+              <pitch>45</pitch>
               <tpc>17</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11679,7 +11639,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>qwVSWr9wQeD_QJnYwkZSbW</eid>
-              <pitch>45</pitch>
+              <pitch>57</pitch>
               <tpc>17</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11697,7 +11657,7 @@ Arranged by Jyaku</text>
                 <subtype>accidentalSharp</subtype>
                 <eid>hq4r8RhPP0_hNSBJycpaSC</eid>
                 </Accidental>
-              <pitch>37</pitch>
+              <pitch>49</pitch>
               <tpc>21</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11715,7 +11675,7 @@ Arranged by Jyaku</text>
             <eid>2cXsymwhYGG_3LK5DgDtyOF</eid>
             <durationType>quarter</durationType>
             <Articulation>
-              <subtype>articTenutoBelow</subtype>
+              <subtype>articTenutoAbove</subtype>
               <eid>OoY2Fc+hOAO_oVQbRCaw5hD</eid>
               </Articulation>
             <Note>
@@ -11724,7 +11684,7 @@ Arranged by Jyaku</text>
                 <subtype>accidentalSharp</subtype>
                 <eid>vhQUTSRkhMM_0J/0VKHuwaJ</eid>
                 </Accidental>
-              <pitch>49</pitch>
+              <pitch>61</pitch>
               <tpc>21</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11738,7 +11698,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>q/3HUsjOxEK_ccmwrxOIpSD</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11756,7 +11716,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>9PxadWf2xZJ_+kllhr7LoaN</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11784,7 +11744,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>fm79I01o8xI_I/wvezWtWPG</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -11806,10 +11766,6 @@ Arranged by Jyaku</text>
             <durationType>whole</durationType>
             <Note>
               <eid>FvkZulX5LMG_6Wf98A7n6aK</eid>
-              <Accidental>
-                <subtype>accidentalNatural</subtype>
-                <eid>UJwvWgWl3eP_GZA+7O2IxeF</eid>
-                </Accidental>
               <Spanner type="Tie">
                 <Tie>
                   <eid>2JO0OnokFqM_ifGFG2DV1i</eid>
@@ -11820,8 +11776,8 @@ Arranged by Jyaku</text>
                     </location>
                   </next>
                 </Spanner>
-              <pitch>47</pitch>
-              <tpc>19</tpc>
+              <pitch>46</pitch>
+              <tpc>12</tpc>
               <velocity>80</velocity>
               </Note>
             <Note>
@@ -11836,8 +11792,8 @@ Arranged by Jyaku</text>
                     </location>
                   </next>
                 </Spanner>
-              <pitch>57</pitch>
-              <tpc>17</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
               <velocity>80</velocity>
               </Note>
             </Chord>
@@ -11861,8 +11817,8 @@ Arranged by Jyaku</text>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>47</pitch>
-              <tpc>19</tpc>
+              <pitch>46</pitch>
+              <tpc>12</tpc>
               <velocity>80</velocity>
               </Note>
             <Note>
@@ -11874,8 +11830,8 @@ Arranged by Jyaku</text>
                     </location>
                   </prev>
                 </Spanner>
-              <pitch>57</pitch>
-              <tpc>17</tpc>
+              <pitch>55</pitch>
+              <tpc>15</tpc>
               <velocity>80</velocity>
               </Note>
             </Chord>
@@ -12012,7 +11968,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>y+AA7wUYQFL_brtG+U5kVCD</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12030,7 +11986,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>ziTyOXsUkMN_z3mIpOogA6I</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12040,7 +11996,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>HXk4KsvUayN_Hy3f0c1whaJ</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12058,7 +12014,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>4rienc423DH_kF8wKlwnrrF</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12272,7 +12228,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Vk8oTJnJyQJ_39hosHfxtSM</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12290,7 +12246,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>XxYGhUASDRF_+fA2jb3ELaC</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12300,7 +12256,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>7uFqFebAfWB_RHgZR2pUOHO</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12318,7 +12274,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>+Cve4ojl2rP_zQ6i2g8JbpE</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12679,7 +12635,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>KvR5uJVNzzN_0dfytUWQj4L</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12697,7 +12653,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>ZsgJ78FRzKH_ryO+55i9PmL</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12707,7 +12663,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>szQsj63xeqL_0AaV2HHYwyF</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12725,7 +12681,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>O9GEiGE4qPK_QMqxZjuHXME</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12799,7 +12755,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>KDyGtq/Zi5_gwECkeINODG</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12816,7 +12772,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>CBmsQjwr2ON_JhY4y9kcE+P</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12826,7 +12782,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>F0FaBgY2WMK_UrqkXZb62bJ</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12843,7 +12799,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>DsdjVf1wgQP_x82iO3BMpkF</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12916,7 +12872,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Ox14JCsGA5M_NyD8nHT+yaC</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12934,7 +12890,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>6lywES/DXCK_pNBNXHY2AdM</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12944,7 +12900,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>LaxUJN3FJQO_JsYB/Zo/njB</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -12962,7 +12918,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>0w4YCycuQCJ_zqVJpclV/cL</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13036,7 +12992,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Au6gzmhCkHG_1D9JRweCgdF</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13053,7 +13009,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>pnJwkeRg56B_wEPlhfZpBMO</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13063,7 +13019,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Px+yy6bkKEG_6wGfRnGOtmN</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13080,7 +13036,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>sekwnDhrpYI_J4u+JHqHhIF</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13466,7 +13422,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>7Ex1Vu5L/JN_hFU5TqDTUnC</eid>
-              <pitch>33</pitch>
+              <pitch>45</pitch>
               <tpc>17</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13484,7 +13440,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>H3qU/X2PZqP_XcLNhGNEekF</eid>
-              <pitch>45</pitch>
+              <pitch>57</pitch>
               <tpc>17</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13502,7 +13458,7 @@ Arranged by Jyaku</text>
                 <subtype>accidentalSharp</subtype>
                 <eid>/PGqqq35zvE_9SRoNP8FT7</eid>
                 </Accidental>
-              <pitch>37</pitch>
+              <pitch>49</pitch>
               <tpc>21</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13520,7 +13476,7 @@ Arranged by Jyaku</text>
             <eid>uk2Yh9IgzP_ix35PLBT4iO</eid>
             <durationType>quarter</durationType>
             <Articulation>
-              <subtype>articTenutoBelow</subtype>
+              <subtype>articTenutoAbove</subtype>
               <eid>2G+PsUcesoI_CK20sOxcN3</eid>
               </Articulation>
             <Note>
@@ -13529,7 +13485,7 @@ Arranged by Jyaku</text>
                 <subtype>accidentalSharp</subtype>
                 <eid>pJqjvK4Cr7M_wQ0UvSXo4eK</eid>
                 </Accidental>
-              <pitch>49</pitch>
+              <pitch>61</pitch>
               <tpc>21</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13543,7 +13499,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>yPi/4XSxaZJ_5e3tPBLqgvM</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13561,7 +13517,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>0+3DyV135zN_qGdKXsLqWfL</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13589,7 +13545,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Pki/pe9tSPK_hGQsz48IDlP</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13827,7 +13783,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>5oCi837dFHP_E0GoRny9y+C</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13845,7 +13801,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>D1WYzpEAeEJ_Nv9rKaK+l4B</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13855,7 +13811,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>hCecmV1nUIM_a1pXBhxKCXC</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -13873,7 +13829,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>R8XKIoS5QpH_xF2sas0mWlF</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14087,7 +14043,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>GaD+AAVgY1P_6oJrvcTh4yM</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14105,7 +14061,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>YBvdmCB4F6_eY/7RooCL+F</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14115,7 +14071,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>wrcnQdqQbrI_AoWa6tcEU1</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14133,7 +14089,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>tV2to7LxAFO_cQBQcq68Q9C</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14347,7 +14303,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>O6r8mbakS8H_cmoY50XUPFN</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14365,7 +14321,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Ww3lgjb5OUC_VmuwBC3UA6B</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14375,7 +14331,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>d6QFbK9wYyI_saTcba/f+hO</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14393,7 +14349,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>xsiBemi1acN_4EKUECD+RTK</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14548,7 +14504,7 @@ Arranged by Jyaku</text>
             <eid>bdRTi0mpGhO_mLA/WCvTMT</eid>
             <durationType>quarter</durationType>
             <Articulation>
-              <subtype>articTenutoAbove</subtype>
+              <subtype>articTenutoBelow</subtype>
               <eid>OhAQ6lVziNJ_VAZikwgB24F</eid>
               </Articulation>
             <Note>
@@ -14557,7 +14513,7 @@ Arranged by Jyaku</text>
                 <subtype>accidentalSharp</subtype>
                 <eid>MFM8KnWdVtP_FvdP0PKCUcP</eid>
                 </Accidental>
-              <pitch>51</pitch>
+              <pitch>39</pitch>
               <tpc>23</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14567,7 +14523,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>jQ0H1WrA3NM_kKjvHXEUUxP</eid>
-              <pitch>57</pitch>
+              <pitch>45</pitch>
               <tpc>17</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14584,13 +14540,17 @@ Arranged by Jyaku</text>
           <Chord>
             <eid>KkFHvQj/IJO_AVf1wkrfIcO</eid>
             <durationType>quarter</durationType>
+            <Articulation>
+              <subtype>articTenutoAbove</subtype>
+              <eid>/0FLMtaE+X_1GxNoN7/E/E</eid>
+              </Articulation>
             <Note>
               <eid>z8xd5HchUbH_1utV33fM0iC</eid>
               <Accidental>
                 <subtype>accidentalSharp</subtype>
-                <eid>MbM3qg394yK_ryxIL5gDW3M</eid>
+                <eid>pTEUSlbIB2B_FbfKwW1M5oJ</eid>
                 </Accidental>
-              <pitch>63</pitch>
+              <pitch>51</pitch>
               <tpc>23</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14600,7 +14560,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>HqAIOnBjpOK_n0umGwxPugC</eid>
-              <pitch>57</pitch>
+              <pitch>45</pitch>
               <tpc>17</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14711,7 +14671,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>CsAqGU64VBM_ovRavB/GaiE</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14728,7 +14688,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>bwnea7jkjZB_zin/+wk9WgN</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14738,7 +14698,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>vcszRKfsDUO_h+b9PmEYpzO</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14755,7 +14715,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>PdHu5kM1CbF_wljs75FzG9N</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14769,7 +14729,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>td4+Gqw4o3O_PUeIITO5G7</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14786,7 +14746,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>MHKaM/luA+J_hKHfcq3UQYF</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14796,7 +14756,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>p2fnejoFaPB_NhKNyRqtdJO</eid>
-              <pitch>36</pitch>
+              <pitch>48</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -14813,7 +14773,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>tUux3SVb9bI_v363o/C9YZP</eid>
-              <pitch>48</pitch>
+              <pitch>60</pitch>
               <tpc>14</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15047,7 +15007,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>PyD3QUaGJHN_xMkn9ZZxWYM</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15065,7 +15025,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>HpanLAvqo7J_Wkg7TIUEw/B</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15075,7 +15035,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>/ddziwwxn9O_43QFn/tlYnJ</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15093,7 +15053,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>dqtjyjADGtI_rd4bE0P3CRM</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15322,7 +15282,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>QNalccyuOKG_ibGqb7QwB1H</eid>
-              <pitch>35</pitch>
+              <pitch>47</pitch>
               <tpc>19</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15339,7 +15299,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>Mjdx75Fe4nD_E3Z829jhKSJ</eid>
-              <pitch>47</pitch>
+              <pitch>59</pitch>
               <tpc>19</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15381,7 +15341,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>M9LdYZjENaC_YKjyE43n3NG</eid>
-              <pitch>35</pitch>
+              <pitch>47</pitch>
               <tpc>19</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15398,7 +15358,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>sKaEdytsd+N_3rMRdEnB/N</eid>
-              <pitch>47</pitch>
+              <pitch>59</pitch>
               <tpc>19</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15532,7 +15492,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>B+Nq4z+kvYI_Rph2qenRGbO</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15550,7 +15510,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>otyoN9+jXDL_7VtMnwWjO5H</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15560,7 +15520,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>AP4oMkuCdKJ_QS1H3XKLa/G</eid>
-              <pitch>38</pitch>
+              <pitch>50</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15578,7 +15538,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>zHkwizzlpJE_7UCqbF9cyEP</eid>
-              <pitch>50</pitch>
+              <pitch>62</pitch>
               <tpc>16</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15807,7 +15767,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>taARXymiSKO_4bbqllw7nnJ</eid>
-              <pitch>35</pitch>
+              <pitch>47</pitch>
               <tpc>19</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15824,7 +15784,7 @@ Arranged by Jyaku</text>
             <durationType>quarter</durationType>
             <Note>
               <eid>XFCvyZpXC7P_HTdvDNNkoDB</eid>
-              <pitch>47</pitch>
+              <pitch>59</pitch>
               <tpc>19</tpc>
               <velocity>80</velocity>
               </Note>
@@ -15850,6 +15810,11 @@ Arranged by Jyaku</text>
               <tpc>18</tpc>
               <velocity>80</velocity>
               </Note>
+            <Note>
+              <eid>U/y2pjniTzO_GmUKxFL+l2E</eid>
+              <pitch>52</pitch>
+              <tpc>18</tpc>
+              </Note>
             </Chord>
           <Chord>
             <eid>peCkjQZ/luC_SSDjDKjgsGP</eid>
@@ -15861,6 +15826,14 @@ Arranged by Jyaku</text>
               <velocity>80</velocity>
               </Note>
             </Chord>
+          <Harmony>
+            <harmonyInfo>
+              <name>m</name>
+              <root>18</root>
+              </harmonyInfo>
+            <eid>2nl63kMrRiM_O3XazxjceUK</eid>
+            <harmonyDuration>2</harmonyDuration>
+            </Harmony>
           <Chord>
             <eid>oWKYD7VF3xB_zTYuR8yXEDG</eid>
             <durationType>half</durationType>
